@@ -16,11 +16,11 @@ public:
     ~MainWindow();
     
 private slots:
-    void on_pushButton_clicked();
+    void PushButtonMelonClicked();
 
-    void on_pushButton_2_clicked();
+    void PushButtonAppleClicked();
 
-    void on_pushButton_3_clicked();
+    void PushButtonStrawberyClicked();
 
 private:
     Ui::MainWindow *ui;

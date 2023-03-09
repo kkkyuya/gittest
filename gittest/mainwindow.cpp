@@ -7,6 +7,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    connect(ui->pushButton,
+            SIGNAL(clicked()),
+            this,
+            SLOT(  PushButtonMelonClicked()  )
+            );
+
+    connect(ui->pushButton_2,
+            SIGNAL(clicked()),
+            this,
+            SLOT(  PushButtonAppleClicked()  )
+            );
+
+    connect(ui->pushButton_3,
+            SIGNAL(clicked()),
+            this,
+            SLOT(  PushButtonStrawberyClicked()  )
+            );
 }
 
 MainWindow::~MainWindow()
@@ -14,17 +32,17 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::PushButtonMelonClicked()
 {
-    qDebug() << "melon　clicked()!";
+    qDebug() << "melon clicked()!";
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::PushButtonAppleClicked()
 {
-    qDebug() << "　apple clicked()!";
+    qDebug() << "apple clicked()!";
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::PushButtonStrawberyClicked()
 {
-    qDebug() << "strawbery　clicked()!";
+    qDebug() << "strawbery clicked()!";
 }
