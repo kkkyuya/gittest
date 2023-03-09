@@ -11,17 +11,29 @@ MainWindow::MainWindow(QWidget *parent) :
             SIGNAL(clicked()),
             this,
             SLOT(pushButtonOn()));
+
+    // リンゴ画像を入れる
+    applescene = new QGraphicsScene(parent);
+    ui->graphicsView->setScene(applescene);
+    QPixmap pixmap(":/res/apple.png");
+    applescene->addPixmap(pixmap);
+    // 正解不正解文字列の初期化(nullにする)
+    ui->label->setText("");
+
 }
 
 MainWindow::~MainWindow()
 {
+    delete applescene;
     delete ui;
 }
 
 void MainWindow::on_pushButton_clicked()
 {
-    qDebug() << "melon　clicked()!";
+    qDebug() << "melon clicked()!";
     ui->pushButton->setText("Melon");
+
+    ui->label->setText("Wrong");
 }
 
 
@@ -32,10 +44,12 @@ void MainWindow::pushButtonOn() {
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    qDebug() << "　apple clicked()!";
+    qDebug() << "apple clicked()!";
+    ui->label->setText("Right");
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    qDebug() << "strawbery　clicked()!";
+    qDebug() << "strawbery clicked()!";
+    ui->label->setText("Wrong");
 }

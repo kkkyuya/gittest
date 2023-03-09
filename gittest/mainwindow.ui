@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>220</y>
+      <y>240</y>
       <width>120</width>
       <height>20</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>220</y>
+      <y>240</y>
       <width>120</width>
       <height>20</height>
      </rect>
@@ -44,13 +44,36 @@
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>220</y>
+      <y>240</y>
       <width>120</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>イチゴ</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>11</y>
+      <width>391</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>100</y>
+      <width>62</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>
