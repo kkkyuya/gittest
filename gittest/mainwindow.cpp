@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->pushButton,
+            SIGNAL(clicked()),
+            this,
+            SLOT(pushButtonOn()));
 }
 
 MainWindow::~MainWindow()
@@ -17,6 +21,13 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     qDebug() << "melon　clicked()!";
+    ui->pushButton->setText("Melon");
+}
+
+
+void MainWindow::pushButtonOn() {
+
+    qDebug() << "Manual connect!";
 }
 
 void MainWindow::on_pushButton_2_clicked()
